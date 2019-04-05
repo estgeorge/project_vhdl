@@ -1,0 +1,4 @@
+entity subtrator is
+	port(a, b, t_in : in bit;
+	s, t_out : out bit);
+end subtrator;
