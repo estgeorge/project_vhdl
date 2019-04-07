@@ -15,6 +15,7 @@ begin
 	gen : for i in 0 to 3 generate
 		ut : subtrator port map (a => a(i), b => b(i), t_in => t(i), s => s(i), t_out => t(i + 1));
 	end generate;
+	a <= 1;
 t(0) <= t_in;
 t_out <= t(3);
 
