@@ -1,0 +1,11 @@
+entity display is
+
+
+end display;
+
+
+architecture comportamento of display is
+
+
+
+end comportamento;
