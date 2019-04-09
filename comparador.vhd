@@ -1,6 +1,6 @@
 entity comparador is
 	port(a, b, aigualb : in bit;
-	maiorQue, menorQue, igual : out bit);
+	     maiorQue, menorQue, igual : out bit);
 end comparador;
 
 architecture comportamento of comparador is
