@@ -45,16 +45,22 @@ signal soma, sub, inv: bit_vector (3 downto 0);
 
 begin
 
+-- operações da calculadora
 usub:subtrator_quatro_bits port map (x1, x2, '1', sub, sub_cout);
 usoma:somador_quatro_bits port map (x1, x2, '0', soma, soma_cout);
 ucomp:comparador_quatro_bits port map (x1, x2, maiorQue, menorQue, igual);
 uinv:inversor_quatro_bits port map (x1, inv);
     	 
+-- multiplexação para o display de 7 segmentos		 
 uy: for i in 0 to 3 generate
  		    ut: multiplexador port map (sub(i), soma(i), '0', '0', inv(i), s0, s1, s2, y(i));		
  	    end generate;
-uctrl1:multiplexador port map ('0', '0', '1', '1', '0', s0, s1, s2, ctrl(0));
-uctrl2:multiplexador port map ('0', menorQue, '0', '0', '0', s0, s1, s2, ctrl(1));
-uco:multiplexador port map (soma_cout, '0', maiorQue, menorQue, '0', s0, s1, s2, co);	
+		 
+-- multiplexação para o código de controle		 
+uctrl1:multiplexador port map (menorQue, '0', '0', '0', '0', s0, s1, s2, ctrl(0));
+uctrl2:multiplexador port map ('0', '0', '1', '1', '0', s0, s1, s2, ctrl(1));
+
+-- multiplexação para o led
+uco:multiplexador port map ('0', soma_cout, maiorQue, menorQue, '0', s0, s1, s2, co);	
 	
 end comportamento;
