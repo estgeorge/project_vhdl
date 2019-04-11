@@ -49,21 +49,49 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_location_assignment PIN_V2 -to x1[3]
+set_location_assignment PIN_V1 -to x1[2]
+set_location_assignment PIN_U4 -to x1[1]
+set_location_assignment PIN_U3 -to x1[0]
+set_location_assignment PIN_T7 -to x2[3]
+set_location_assignment PIN_P2 -to x2[2]
+set_location_assignment PIN_P1 -to x2[1]
+set_location_assignment PIN_N1 -to x2[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_V13 -to d[6]
+set_global_assignment -name VHDL_FILE conversor.vhd
 set_global_assignment -name VHDL_FILE somador.vhd
 set_global_assignment -name VHDL_FILE somador_quatro_bits.vhd
 set_global_assignment -name VHDL_FILE calculadora.vhd
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name VHDL_FILE subtrator.vhd
 set_global_assignment -name VHDL_FILE subtrator_quatro_bits.vhd
 set_global_assignment -name VHDL_FILE comparador_quatro_bits.vhd
 set_global_assignment -name VHDL_FILE comparador.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE multiplexador.vhd
 set_global_assignment -name VHDL_FILE inversor_quatro_bits.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE calculadora.vwf
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE display.vhd
+set_global_assignment -name VHDL_FILE desligamento.vhd
+set_global_assignment -name VHDL_FILE conversor_display.vhd
+set_global_assignment -name VHDL_FILE multiplexador2.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/pcwindows/arquivos_windows/winstuffs/graduação CeT/cursos/2019-1/Laboratorio Sistemas Digitais/quartus/calculadora/calculadora.vwf"
+set_location_assignment PIN_AF10 -to d[0]
+set_location_assignment PIN_AB12 -to d[1]
+set_location_assignment PIN_AC12 -to d[2]
+set_location_assignment PIN_AD11 -to d[3]
+set_location_assignment PIN_AE11 -to d[4]
+set_location_assignment PIN_V14 -to d[5]
+set_location_assignment PIN_AE14 -to ligado
+set_location_assignment PIN_N25 -to s0
+set_location_assignment PIN_N26 -to s1
+set_location_assignment PIN_P25 -to s2
+set_location_assignment PIN_AE23 -to co
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

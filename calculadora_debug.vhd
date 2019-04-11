@@ -4,6 +4,8 @@ entity calculadora is
 			s0, s1, s2 : in bit;		
 		   ligado : in bit;	
          d : out bit_vector (6 downto 0);
+         --ctrlout: out bit_vector (1 downto 0);
+			--yout : out bit_vector (3 downto 0);
 			co : out bit);
 end calculadora;
 
@@ -86,4 +88,10 @@ desl:desligamento port map (co_aux, ctrl_aux, ligado, co, ctrl );
 -- Conversão para o display de 7 segmentos de acordo com o código de controle
 dis:display port map (y,ctrl,d);
 
+-- Debug
+--ctrlout(0) <= ctrl(0);
+--ctrlout(1) <= ctrl(1);
+--yout <= y;
+
+	
 end comportamento;
