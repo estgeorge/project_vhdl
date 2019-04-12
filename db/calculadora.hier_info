@@ -1,0 +1,73 @@
+|subtrator_quatro_bits
+a[0] => subtrator:gen:0:ut.a
+a[1] => subtrator:gen:1:ut.a
+a[2] => subtrator:gen:2:ut.a
+a[3] => subtrator:gen:3:ut.a
+b[0] => subtrator:gen:0:ut.b
+b[1] => subtrator:gen:1:ut.b
+b[2] => subtrator:gen:2:ut.b
+b[3] => subtrator:gen:3:ut.b
+t_in => subtrator:gen:0:ut.t_in
+s[0] <= subtrator:gen:0:ut.s
+s[1] <= subtrator:gen:1:ut.s
+s[2] <= subtrator:gen:2:ut.s
+s[3] <= subtrator:gen:3:ut.s
+t_out <= subtrator:gen:3:ut.t_out
+
+
+|subtrator_quatro_bits|subtrator:\gen:0:ut
+a => s~0.IN0
+a => t_out~0.IN0
+a => t_out~1.IN0
+b => s~0.IN1
+b => t_out~0.IN1
+b => t_out~3.IN0
+t_in => s~1.IN1
+t_in => t_out~1.IN1
+t_in => t_out~3.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+t_out <= t_out~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|subtrator_quatro_bits|subtrator:\gen:1:ut
+a => s~0.IN0
+a => t_out~0.IN0
+a => t_out~1.IN0
+b => s~0.IN1
+b => t_out~0.IN1
+b => t_out~3.IN0
+t_in => s~1.IN1
+t_in => t_out~1.IN1
+t_in => t_out~3.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+t_out <= t_out~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|subtrator_quatro_bits|subtrator:\gen:2:ut
+a => s~0.IN0
+a => t_out~0.IN0
+a => t_out~1.IN0
+b => s~0.IN1
+b => t_out~0.IN1
+b => t_out~3.IN0
+t_in => s~1.IN1
+t_in => t_out~1.IN1
+t_in => t_out~3.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+t_out <= t_out~4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|subtrator_quatro_bits|subtrator:\gen:3:ut
+a => s~0.IN0
+a => t_out~0.IN0
+a => t_out~1.IN0
+b => s~0.IN1
+b => t_out~0.IN1
+b => t_out~3.IN0
+t_in => s~1.IN1
+t_in => t_out~1.IN1
+t_in => t_out~3.IN1
+s <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+t_out <= t_out~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

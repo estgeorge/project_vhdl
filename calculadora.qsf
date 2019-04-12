@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP2C35F672C6
 set_global_assignment -name TOP_LEVEL_ENTITY calculadora
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:19:57  APRIL 08, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -61,9 +61,6 @@ set_location_assignment PIN_T7 -to x2[3]
 set_location_assignment PIN_P2 -to x2[2]
 set_location_assignment PIN_P1 -to x2[1]
 set_location_assignment PIN_N1 -to x2[0]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_V13 -to d[6]
 set_global_assignment -name VHDL_FILE conversor.vhd
 set_global_assignment -name VHDL_FILE somador.vhd
@@ -82,7 +79,6 @@ set_global_assignment -name VHDL_FILE conversor_display.vhd
 set_global_assignment -name VHDL_FILE multiplexador2.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/pcwindows/arquivos_windows/winstuffs/graduação CeT/cursos/2019-1/Laboratorio Sistemas Digitais/quartus/calculadora/calculadora.vwf"
 set_location_assignment PIN_AF10 -to d[0]
 set_location_assignment PIN_AB12 -to d[1]
 set_location_assignment PIN_AC12 -to d[2]
@@ -94,4 +90,10 @@ set_location_assignment PIN_N25 -to s0
 set_location_assignment PIN_N26 -to s1
 set_location_assignment PIN_P25 -to s2
 set_location_assignment PIN_AE23 -to co
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulacao_somador_quatro_bits.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE simulacao_subtrator_quatro_bits.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/bennb/OneDrive/Área de Trabalho/project_vhdl/simulacao_subtrator_quatro_bits.vwf"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
